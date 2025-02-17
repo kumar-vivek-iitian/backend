@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, writeFile, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 
 const FILE = "tasks.json";
 let tasks = [];
