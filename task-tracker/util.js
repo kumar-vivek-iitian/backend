@@ -4,9 +4,11 @@ const FILE = "tasks.json";
 let tasks = [];
 
 function writeContents() {
-  writeFileSync(FILE, JSON.stringify(tasks), (err) => {
-    if (err) console.log("Error updating tasks.json.");
-  });
+  try {
+    writeFileSync(FILE, JSON.stringify(tasks));
+  } catch (err) {
+    console.log(`Error writing contents to ${FILE}.`);
+  }
 }
 
 function initTasks() {
