@@ -73,6 +73,7 @@ function addTask(description) {
     updateAt: time,
   });
   writeContents();
+  console.log(`Task added successfully (ID: ${taskid})`)
 }
 
 function updateTask(id, description) {
@@ -107,7 +108,7 @@ function markProgress(id) {
   initTasks();
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].id == id) {
-      tasks[i].status = "progress";
+      tasks[i].status = "in-progress";
       break;
     }
   }
